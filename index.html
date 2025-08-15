@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clinnio — Em breve</title>
+  <meta name="description" content="Clinnio: sistema simples e moderno para pequenos consultórios. Lançamento em breve." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b1220; --card:#0f172a; --text:#e5e7eb; --muted:#94a3b8; --brand:#5eead4; --accent:#38bdf8;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,"Helvetica Neue",Arial;
+      background: radial-gradient(90% 60% at 50% 0%, rgba(56,189,248,.08), transparent 60%),
+                  radial-gradient(70% 50% at 100% 0%, rgba(94,234,212,.06), transparent 60%),
+                  var(--bg);
+      color:var(--text); display:flex; align-items:center; justify-content:center; padding:24px;
+    }
+    .container{width:min(960px,100%); margin:auto; text-align:center}
+    .card{
+      background:linear-gradient(180deg, rgba(148,163,184,.12), transparent 40%) , var(--card);
+      border:1px solid rgba(148,163,184,.15);
+      border-radius:20px; padding:32px 24px; box-shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    .logo{height:56px; width:auto; margin:0 auto 16px auto; display:block; filter:drop-shadow(0 2px 8px rgba(94,234,212,.3))}
+    h1{font-size:clamp(28px,4vw,40px); margin:8px 0 8px; line-height:1.15}
+    p.lead{color:var(--muted); margin:0 auto 20px; max-width:56ch}
+    .countdown{display:flex; gap:12px; justify-content:center; margin:18px 0 26px}
+    .time{background:rgba(148,163,184,.12); border:1px solid rgba(148,163,184,.18); padding:14px 16px; border-radius:14px; min-width:86px}
+    .time strong{display:block; font-size:22px}
+    .time span{color:var(--muted); font-size:12px}
+    .cta{display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin:10px 0 6px}
+    .btn{
+      appearance:none; border:0; border-radius:12px; padding:12px 18px; cursor:pointer;
+      background:linear-gradient(180deg, var(--accent), var(--brand));
+      color:#0b1220; font-weight:700; font-size:15px; box-shadow:0 6px 18px rgba(56,189,248,.35);
+      text-decoration:none;
+    }
+    .btn.secondary{background:transparent; color:var(--text); border:1px solid rgba(148,163,184,.28)}
+    .grid{display:grid; grid-template-columns:1fr; gap:18px; margin-top:22px}
+    @media (min-width:880px){ .grid{grid-template-columns: 1.2fr .8fr} }
+    .panel{background:rgba(2,6,23,.45); border:1px solid rgba(148,163,184,.15); border-radius:16px; padding:16px}
+    iframe{width:100%; height:420px; border:0; border-radius:12px; background:#fff}
+    footer{color:var(--muted); margin-top:18px; font-size:12px}
+    .badge{display:inline-block; padding:6px 10px; border-radius:999px; background:rgba(94,234,212,.15); color:var(--brand); font-weight:700; font-size:12px; letter-spacing:.02em}
+  </style>
+</head>
+<body>
+  <main class="container">
+    <div class="card">
+      <!-- Troque pela sua logo (pode subir /logo.png no repo e usar src="./logo.png") -->
+      <img class="logo" src="https://dummyimage.com/240x56/5eead4/0b1220&text=Clinnio" alt="Clinnio logo" />
+      <span class="badge">Em breve</span>
+      <h1>Clinnio — simples, moderno e feito para consultórios</h1>
+      <p class="lead">Lançamento previsto para <strong>outubro/2025</strong>. Cadastre-se para receber novidades e desconto exclusivo no lançamento.</p>
+
+      <div class="countdown" id="countdown">
+        <div class="time"><strong id="d">--</strong><span>dias</span></div>
+        <div class="time"><strong id="h">--</strong><span>horas</span></div>
+        <div class="time"><strong id="m">--</strong><span>min</span></div>
+        <div class="time"><strong id="s">--</strong><span>seg</span></div>
+      </div>
+
+      <div class="cta">
+        <a class="btn" href="#cadastro">Quero desconto no lançamento</a>
+        <a class="btn secondary" href="#sobre">Saiba mais</a>
+      </div>
+
+      <div class="grid">
+        <section class="panel" id="sobre">
+          <h2 style="margin:0 0 10px 0;font-size:20px">Por que o Clinnio?</h2>
+          <ul style="text-align:left; line-height:1.7; margin:0; padding-left:18px; color:var(--text)">
+            <li>Agendamentos rápidos com confirmação via WhatsApp</li>
+            <li>Prontuário simples e focado no essencial</li>
+            <li>Controle financeiro e relatórios claros</li>
+            <li>Estoque de materiais sem complicação</li>
+          </ul>
+          <p style="text-align:left; color:var(--muted); margin-top:8px">Feito para clínicas pequenas que precisam de agilidade.</p>
+        </section>
+
+        <section class="panel" id="cadastro" aria-label="Cadastro">
+          <h2 style="margin:0 0 10px 0;font-size:20px">Avise-me no lançamento</h2>
+          <!-- Substitua o src pelo "Incorporar HTML" do seu Google Forms -->
+          <iframe src="https://docs.google.com/forms/d/e/SEU_FORM_ID/viewform?embedded=true">Carregando…</iframe>
+          <p style="color:var(--muted); font-size:12px; margin-top:8px">Prometemos não fazer spam. Você pode sair da lista quando quiser.</p>
+        </section>
+      </div>
+
+      <footer>© <span id="year"></span> Clinnio. Todos os direitos reservados.</footer>
+    </div>
+  </main>
+
+  <script>
+    // Ajuste a data do lançamento (AAAA-MM-DDTHH:MM:SS-03:00)
+    const launchAt = new Date("2025-10-15T10:00:00-03:00").getTime();
+    function tick(){
+      const now = Date.now();
+      const diff = Math.max(0, launchAt - now);
+      const d = Math.floor(diff / (1000*60*60*24));
+      const h = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+      const m = Math.floor((diff % (1000*60*60)) / (1000*60));
+      const s = Math.floor((diff % (1000*60)) / 1000);
+      document.getElementById("d").textContent = String(d).padStart(2,"0");
+      document.getElementById("h").textContent = String(h).padStart(2,"0");
+      document.getElementById("m").textContent = String(m).padStart(2,"0");
+      document.getElementById("s").textContent = String(s).padStart(2,"0");
+      if (diff === 0) clearInterval(timer);
+    }
+    const timer = setInterval(tick, 1000); tick();
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
